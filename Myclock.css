@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 10px;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    color: #d2baba;
+}
+
+.Clock {
+    width: 320px;
+    background: #ccc;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 4 20px 25px rgba(0, 0, 0, 0.2);
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Inner_Clock {
+    width: 300px;
+    background: #ccc;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 4 20px 25px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid #f56a6a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+Span {
+    position: absolute;
+    inset: 20px;
+    color: #000;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    /* 360 / 12 = 30deg*/
+    font-size: 20px;
+
+}
+
+span b {
+    font-weight: 600;
+    display: inline-block;
+}
+.center_ball{
+    position:absolute;
+    width:20px;
+    height: 20px;
+    background:#ccc;
+    border-radius:10px;
+
+}
+
+.round_ball_2 {
+    width: 260px;
+    border-radius: 50%;
+    height: 260px;
+    border: 4px solid #d2baba;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: beige;
+}
+
+.clock-intx {
+    position: absolute;
+    bottom: 40px;
+    left: 40%;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.round_ball_3 {
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    background: rgb(251, 244, 244);
+    position: absolute;
+    right: 20px;
+}
+
+.round_ball {
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    background: rgb(245, 243, 248);
+    position: absolute;
+    left: 20px;
+}
+
+/* clock arrows */
+.round_ball_2 i {
+    position: absolute;
+    width: 6px;
+    height: 50px;
+    background: var(--clr);
+    opacity: 0.75;
+    transform-origin:bottom;
+    transform: scaleY(0.9);
+    border-radius: 0 0 50px 50px;
+}
+
+.i-1 {
+    width: 2px;
+}
+
+.i-1 {
+    width: 6px;
+}
+
+/* 
+.Circle2{
+    width:240px;
+    height: 240px;
+    z-index: 9;
+}
+
+.Circle3{
+    width:180px;
+    height: 180px;
+    z-index: 8;
+} */
+
+#time {
+    display: flex;
+    padding: 10px 10px;
+    font-size: 20px;
+    background: #000;
+    border-radius:10px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px -15px rgba(52, 37, 37, 0.55), inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#time div{
+    position: relative;
+    width: 60px;
+    text-align: center;
+    color:var(--clr);
+    
+}
+
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after{
+    content: ':';
+    position:absolute;
+    right:4px;
+    }
+
+    #time div:last-child{
+        font: size 22px;
+        display: flex;
+        color: #fff;
+    }
+    #time div:nth-child(2)::after{
+        animation: animate
+        1s steps(1) infinite;
+    }
+    @keyframes animate{
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+    }
+
+    /* RESPONSIVE  */
+
+    /* @media screen and (max-width:768px){
+        .container{
+            border-radius: 10px;
+        }
+        .
+    } */
+
+    /* selecting the arrows */
+a.button {
+    background-color: #9f2739;
+    /* background-image: -webkit-linear-gradient(top, #f6a7b3, #f0a3af);
+    background-image: -moz-linear-gradient(top, #f6a7b3, #f0a3af);
+    background-image: linear-gradient(top, #b0132a, #f0a3af);
+    border: 1px solid #eb9ba7; */
+    border-radius: 2px;
+    box-shadow: 0 2px 2px #ccc;
+    color: #fff;
+    text-decoration: none !important;
+    padding: 15px 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+a.button:hover {
+    opacity: 0.9;
+}
